@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+//STUDENT NUMBERS:
+//220013730 KL MOHLOLO
+//224073145 T PHAGE
+//222034858 N SHABALALA
+//223000608 AL HADEBE
+//221034407 NS MOLOI
+
+>>>>>>> 9c3c10e (final)
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/application_model.dart';
@@ -13,6 +23,7 @@ class ApplicationViewModel extends ChangeNotifier {
   bool get isLoading => _isLoading;
   String? get errorMessage => _errorMessage;
 
+<<<<<<< HEAD
   Future<bool> createApplication({
     required String year,
     required String module1Level,
@@ -21,6 +32,15 @@ class ApplicationViewModel extends ChangeNotifier {
     String? module2,
     String? documentUrl,
   }) async {
+=======
+  Future<bool> createApplication(
+      {required String year,
+      required String module1Level,
+      required String module1,
+      String? module2Level,
+      String? module2,
+      String? documentUrl}) async {
+>>>>>>> 9c3c10e (final)
     _isLoading = true;
     _errorMessage = null;
     notifyListeners();
@@ -41,7 +61,11 @@ class ApplicationViewModel extends ChangeNotifier {
         'module2_name': module2,
         'is_eligible': false,
         'status': 'pending',
+<<<<<<< HEAD
         'document_url': documentUrl,
+=======
+        'document_url': documentUrl
+>>>>>>> 9c3c10e (final)
       });
 
       await fetchApplications();
@@ -63,10 +87,15 @@ class ApplicationViewModel extends ChangeNotifier {
       final user = _supabase.auth.currentUser;
       if (user == null) return;
 
+<<<<<<< HEAD
       final response = await _supabase
           .from('applications')
           .select()
           .eq('user_id', user.id);
+=======
+      final response =
+          await _supabase.from('applications').select().eq('user_id', user.id);
+>>>>>>> 9c3c10e (final)
 
       _applications = response
           .map<ApplicationModel>((json) => ApplicationModel.fromJson(json))
@@ -100,7 +129,10 @@ class ApplicationViewModel extends ChangeNotifier {
     }
   }
 
+<<<<<<< HEAD
   // UPDATE Application
+=======
+>>>>>>> 9c3c10e (final)
   Future<bool> updateApplication({
     required String id,
     required String year,
@@ -111,10 +143,18 @@ class ApplicationViewModel extends ChangeNotifier {
     notifyListeners();
 
     try {
+<<<<<<< HEAD
       await _supabase
           .from('applications')
           .update({'year': year, 'module_1': module1, 'module_2': module2})
           .match({'id': id});
+=======
+      await _supabase.from('applications').update({
+        'year': year,
+        'module_1': module1,
+        'module_2': module2,
+      }).match({'id': id});
+>>>>>>> 9c3c10e (final)
 
       await fetchApplications();
       return true;
@@ -127,7 +167,10 @@ class ApplicationViewModel extends ChangeNotifier {
     }
   }
 
+<<<<<<< HEAD
   // DELETE Application
+=======
+>>>>>>> 9c3c10e (final)
   Future<bool> deleteApplication(String id) async {
     _isLoading = true;
     notifyListeners();
@@ -145,6 +188,7 @@ class ApplicationViewModel extends ChangeNotifier {
     }
   }
 
+<<<<<<< HEAD
   // UPDATE STATUS: Admin side
   Future<void> updateStatus(String id, String status) async {
     await _supabase
@@ -154,6 +198,13 @@ class ApplicationViewModel extends ChangeNotifier {
           'is_eligible': status == 'approved' ? true : false,
         })
         .match({'id': id});
+=======
+  Future<void> updateStatus(String id, String status) async {
+    await _supabase.from('applications').update({
+      'status': status,
+      'is_eligible': status == 'approved' ? true : false,
+    }).match({'id': id});
+>>>>>>> 9c3c10e (final)
 
     await fetchAllApplications();
   }

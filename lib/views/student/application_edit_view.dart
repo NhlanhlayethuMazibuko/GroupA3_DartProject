@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+=======
+//STUDENT NUMBERS:
+//220013730 KL MOHLOLO
+//224073145 T PHAGE
+//222034858 N SHABALALA
+//223000608 AL HADEBE
+//221034407 NS MOLOI
+
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+>>>>>>> 9c3c10e (final)
 import '../../models/application_model.dart';
 import '../../viewmodels/application_viewmodel.dart';
 

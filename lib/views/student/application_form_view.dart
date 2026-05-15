@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+//STUDENT NUMBERS:
+//220013730 KL MOHLOLO
+//224073145 T PHAGE
+//222034858 N SHABALALA
+//223000608 AL HADEBE
+//221034407 NS MOLOI
+
+>>>>>>> 9c3c10e (final)
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:file_picker/file_picker.dart';
@@ -28,7 +38,11 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
     'Third Year': [
       'Software Development III',
       'Technical Programming III',
+<<<<<<< HEAD
       'Communications Network III',
+=======
+      'Communications Network III'
+>>>>>>> 9c3c10e (final)
     ],
   };
 
@@ -80,6 +94,7 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+<<<<<<< HEAD
                 const Text(
                   "Application Form",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -92,6 +107,14 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   "Year of Study",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
+=======
+                const Text("Application Form",
+                    style:
+                        TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 25),
+                const Text("Year of Study",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+>>>>>>> 9c3c10e (final)
                 const SizedBox(height: 8),
                 DropdownButtonFormField<String>(
                   initialValue: selectedYear,
@@ -106,6 +129,7 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   validator: (value) =>
                       value == null ? "Year is required" : null,
                 ),
+<<<<<<< HEAD
 
                 const SizedBox(height: 25),
 
@@ -120,6 +144,14 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   "Academic Level",
                   style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
+=======
+                const SizedBox(height: 25),
+                const Text("Module 1",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                const SizedBox(height: 8),
+                const Text("Academic Level",
+                    style: TextStyle(fontSize: 13, color: Colors.grey)),
+>>>>>>> 9c3c10e (final)
                 const SizedBox(height: 5),
                 DropdownButtonFormField<String>(
                   initialValue: selectedLevel1,
@@ -137,6 +169,7 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   validator: (value) =>
                       value == null ? "Academic level is required" : null,
                 ),
+<<<<<<< HEAD
 
                 const SizedBox(height: 12),
 
@@ -144,6 +177,11 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   "Module Name",
                   style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
+=======
+                const SizedBox(height: 12),
+                const Text("Module Name",
+                    style: TextStyle(fontSize: 13, color: Colors.grey)),
+>>>>>>> 9c3c10e (final)
                 const SizedBox(height: 5),
                 DropdownButtonFormField<String>(
                   initialValue: selectedModule1,
@@ -155,8 +193,12 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                       ? []
                       : modulesByLevel[selectedLevel1]!
                           .map(
+<<<<<<< HEAD
                             (e) => DropdownMenuItem(value: e, child: Text(e)),
                           )
+=======
+                              (e) => DropdownMenuItem(value: e, child: Text(e)))
+>>>>>>> 9c3c10e (final)
                           .toList(),
                   onChanged: selectedLevel1 == null
                       ? null
@@ -164,6 +206,7 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   validator: (value) =>
                       value == null ? "Module is required" : null,
                 ),
+<<<<<<< HEAD
 
                 const SizedBox(height: 25),
 
@@ -177,6 +220,14 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   "Academic Level",
                   style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
+=======
+                const SizedBox(height: 25),
+                const Text("Module 2 (Optional)",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                const SizedBox(height: 8),
+                const Text("Academic Level",
+                    style: TextStyle(fontSize: 13, color: Colors.grey)),
+>>>>>>> 9c3c10e (final)
                 const SizedBox(height: 5),
                 DropdownButtonFormField<String>(
                   initialValue: selectedLevel2,
@@ -192,6 +243,7 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                     selectedModule2 = null;
                   }),
                 ),
+<<<<<<< HEAD
 
                 const SizedBox(height: 12),
 
@@ -199,6 +251,11 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   "Module Name",
                   style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
+=======
+                const SizedBox(height: 12),
+                const Text("Module Name",
+                    style: TextStyle(fontSize: 13, color: Colors.grey)),
+>>>>>>> 9c3c10e (final)
                 const SizedBox(height: 5),
                 DropdownButtonFormField<String>(
                   initialValue: selectedModule2,
@@ -210,13 +267,18 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                       ? []
                       : modulesByLevel[selectedLevel2]!
                           .map(
+<<<<<<< HEAD
                             (e) => DropdownMenuItem(value: e, child: Text(e)),
                           )
+=======
+                              (e) => DropdownMenuItem(value: e, child: Text(e)))
+>>>>>>> 9c3c10e (final)
                           .toList(),
                   onChanged: selectedLevel2 == null
                       ? null
                       : (value) => setState(() => selectedModule2 = value),
                 ),
+<<<<<<< HEAD
 
                 const SizedBox(height: 25),
 
@@ -224,6 +286,11 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   "Supporting Document",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
+=======
+                const SizedBox(height: 25),
+                const Text("Supporting Document",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+>>>>>>> 9c3c10e (final)
                 const SizedBox(height: 8),
                 SizedBox(
                   width: double.infinity,
@@ -237,11 +304,16 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                   const SizedBox(height: 8),
                   Row(
                     children: [
+<<<<<<< HEAD
                       const Icon(
                         Icons.check_circle,
                         color: Colors.green,
                         size: 18,
                       ),
+=======
+                      const Icon(Icons.check_circle,
+                          color: Colors.green, size: 18),
+>>>>>>> 9c3c10e (final)
                       const SizedBox(width: 6),
                       Expanded(
                         child: Text(
@@ -253,6 +325,7 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                     ],
                   ),
                 ],
+<<<<<<< HEAD
 
                 const SizedBox(height: 20),
 
@@ -264,6 +337,13 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
 
                 const SizedBox(height: 10),
 
+=======
+                const SizedBox(height: 20),
+                if (appVM.errorMessage != null)
+                  Text(appVM.errorMessage!,
+                      style: const TextStyle(color: Colors.red)),
+                const SizedBox(height: 10),
+>>>>>>> 9c3c10e (final)
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -291,14 +371,22 @@ class _ApplicationFormViewState extends State<ApplicationFormView> {
                                 navigator.pop();
                                 messenger.showSnackBar(
                                   const SnackBar(
+<<<<<<< HEAD
                                     content: Text("Application submitted"),
                                   ),
+=======
+                                      content: Text("Application submitted")),
+>>>>>>> 9c3c10e (final)
                                 );
                               } else {
                                 messenger.showSnackBar(
                                   const SnackBar(
+<<<<<<< HEAD
                                     content: Text("Submission failed"),
                                   ),
+=======
+                                      content: Text("Submission failed")),
+>>>>>>> 9c3c10e (final)
                                 );
                               }
                             }

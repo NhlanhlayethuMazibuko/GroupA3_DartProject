@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+//STUDENT NUMBERS:
+//220013730 KL MOHLOLO
+//224073145 T PHAGE
+//222034858 N SHABALALA
+//223000608 AL HADEBE
+//221034407 NS MOLOI
+
+>>>>>>> 9c3c10e (final)
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodels/application_viewmodel.dart';
@@ -36,7 +46,11 @@ class _StudentHomeViewState extends State<StudentHomeView> {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () => auth.signOut(),
+<<<<<<< HEAD
           ),
+=======
+          )
+>>>>>>> 9c3c10e (final)
         ],
       ),
       body: Consumer<ApplicationViewModel>(
@@ -73,7 +87,13 @@ class _StudentHomeViewState extends State<StudentHomeView> {
         onPressed: () {
           Navigator.push(
             context,
+<<<<<<< HEAD
             MaterialPageRoute(builder: (_) => const ApplicationFormView()),
+=======
+            MaterialPageRoute(
+              builder: (_) => const ApplicationFormView(),
+            ),
+>>>>>>> 9c3c10e (final)
           );
         },
         child: const Icon(Icons.add),
