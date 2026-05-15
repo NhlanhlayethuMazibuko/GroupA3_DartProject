@@ -16,7 +16,7 @@ class RouteManager {
   static const String detail = '/detail';
   static const String edit = '/edit';
 
-  //Generate Routes dynamically
+  //Generating Routes dynamically
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case login:
