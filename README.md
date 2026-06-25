@@ -5,9 +5,12 @@ applications for the Information Technology Department at the Central University
 of Technology. The system allows students to apply for Student Assistant positions
 and enables administrators to review, approve, or reject those applications.
 
-
-Screenshots
-
+## Screenshots
+![Login](App_Screenshots/Login-View.png)
+![Student Dashboard](App_Screenshots/Student-Dashboard-View.png)
+![Application Form](App_Screenshots/Application-Form-View.png)
+![Admin Dashboard](App_Screenshots/Admin-Dashboard-View.png)
+![Submitted Applications](App_Screenshots/Student-Submitted-Applications-View.png)
 
 1. Features
 
